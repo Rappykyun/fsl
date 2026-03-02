@@ -41,7 +41,6 @@ Thumbs.db
 
 # Project-generated ML outputs
 /artifacts/
-/models/
 /reports/
 /data/word_frames/
 /data/nms_frames/
