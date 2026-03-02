@@ -1,0 +1,27 @@
+dataset:
+  word_frames_dir: "data/word_frames"
+  metadata_dir: "artifacts"
+
+feature:
+  use_two_hands: true
+  normalize: true
+  include_handedness: false
+
+train:
+  random_state: 42
+  test_size: 0.2
+  model_type: "random_forest"
+  class_names: []
+  random_forest:
+    n_estimators: [200, 400]
+    max_depth: [null, 20, 30]
+    min_samples_split: [2, 5]
+    min_samples_leaf: [1, 2]
+    max_features: ["sqrt", "log2"]
+    class_weight: ["balanced"]
+    cv: 3
+
+artifacts:
+  model_path: "models/words_model.joblib"
+  encoder_path: "models/words_label_encoder.joblib"
+  report_prefix: "words"

@@ -1,0 +1,19 @@
+dataset:
+  letters_dir: "Hand-SIgns-A-Z"
+  fsl105_root: "FSL-105 A dataset for recognizing 105 Filipino sign language videos/FSL-105 A dataset for recognizing 105 Filipino sign language videos"
+  word_ids: [0, 2, 3, 7, 8]
+  word_frames_dir: "data/word_frames"
+  extracted_metadata_dir: "artifacts"
+
+feature:
+  use_two_hands: true
+  normalize: true
+  include_handedness: false
+
+extraction:
+  sample_fps: 3.0
+  static_motion_threshold: 11.0
+  min_frame_width: 64
+  min_frame_height: 64
+  tail_start_ratio: 0.60
+  max_frames_per_clip: 8

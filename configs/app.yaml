@@ -1,0 +1,46 @@
+inference:
+  mode: "LETTER"
+  conf_threshold: 0.45
+  stability_frames: 4
+  letter_conf_threshold: 0.45
+  letter_stability_frames: 4
+  word_conf_threshold: 0.30
+  word_stability_frames: 6
+
+feature:
+  use_two_hands: true
+  normalize: true
+  include_handedness: false
+
+models:
+  letters_model: "models/letters_model.joblib"
+  letters_encoder: "models/letters_label_encoder.joblib"
+  words_model: "models/words_model.joblib"
+  words_encoder: "models/words_label_encoder.joblib"
+
+nms:
+  enabled: true
+  model: "models/nms_model.joblib"
+  encoder: "models/nms_label_encoder.joblib"
+  conf_threshold: 0.55
+  stability_frames: 5
+  max_num_faces: 1
+  min_detection_confidence: 0.5
+  min_tracking_confidence: 0.5
+  raised_labels: ["eyebrow_raise"]
+
+logo:
+  enabled: true
+  path: "assets/project_kumpas_logo.jpg"
+  max_width: 100
+  margin_top: 12
+  margin_right: 16
+  opacity: 0.95
+
+camera:
+  index: 0
+  width: 1280
+  height: 720
+  flip_horizontal: true
+  fullscreen: true
+  window_name: "FSL Realtime Recognizer"

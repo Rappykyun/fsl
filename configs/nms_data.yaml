@@ -1,0 +1,19 @@
+dataset:
+  nms_root: "data_nsm"
+  nms_frames_dir: "data/nms_frames"
+  metadata_dir: "artifacts"
+  test_size: 0.2
+  random_state: 42
+
+nms:
+  max_num_faces: 1
+  min_detection_confidence: 0.5
+  min_tracking_confidence: 0.5
+
+extraction:
+  sample_fps: 2.0
+  static_motion_threshold: 10.0
+  min_frame_width: 64
+  min_frame_height: 64
+  tail_start_ratio: 0.20
+  max_frames_per_video: 10
