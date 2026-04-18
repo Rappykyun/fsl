@@ -41,6 +41,6 @@ camera:
   index: 0
   width: 1280
   height: 720
-  flip_horizontal: true
+  flip_horizontal: false
   fullscreen: true
   window_name: "FSL Realtime Recognizer"
